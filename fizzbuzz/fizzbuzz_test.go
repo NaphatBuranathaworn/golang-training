@@ -6,8 +6,8 @@ import (
 )
 
 func TestGiven1Wants1(t *testing.T) {
-	given := 3
-	wants := "Fizz"
+	given := 4
+	wants := "4"
 
 	get := fizzbuzz.Say(given)
 	if wants != get {
