@@ -1,0 +1,17 @@
+Basic syntax
+
+var s string
+var s string = "Hello World"
+var s = "Hello Word" // influr type
+
+// ใช้ได้เฉพาะใน function
+s := "Hello World"
+s := 9
+
+กฏการตั้ง package 
+= ใน 1 dir มีกี่ packege ก็ได้ โดยทุกไฟล์ ต้องชื่อ pacakage เดียวกัน
+= กรณีมี sub folder ก็ใช้กฏเดียวกัน
+
+ godoc -http=localhost:6060
+(gen docs from code)
+ 
