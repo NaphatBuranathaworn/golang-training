@@ -14,4 +14,21 @@ s := 9
 
  godoc -http=localhost:6060
 (gen docs from code)
+
+
+variables
+= ประกาศ nummeric type จะ default 0
+= ประกาศ string type จะ default ค่าว่าง ""
  
+
+array กับ slice ต่างกันยังไง?
+= array ตอน for สามารถทำได้เลย แต่
+= slice default เป็น nil
+
+
+Pointer
+var p *int
+= ใช้ตอน declare แปลว่า p เป็น pointer ของ int
+
+fmt.Println(*p)
+= เป็นการ access ที่ address ที่มันเก็บอยู่
