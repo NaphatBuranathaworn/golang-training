@@ -16,7 +16,11 @@ func main() {
 
 	// variadic(1,3,5)
 	// typeMap()
-	primetiveType()
+	// primetiveType()
+
+
+
+	structJSON()
 }
 
 func defaultTypeVariable() {
@@ -109,4 +113,59 @@ func (s String) toInt() int {
 		fmt.Printf("Cannot convert %s to int\n", s)
 	}
 	return n
+}
+
+
+/* DAY 2 */
+
+type Response struct {
+	ID int64 `json: "id"`
+	Name string `json: "firstName"`
+	Title string `json: "title"`
+}
+
+var jsonString = `{
+	"id" : 123,
+	"firstName" : "Mos",
+	"title" : "Mr."
+}`
+
+func structJSON() {
+	var string int
+	fmt.Println(string)
+
+	// var response Response
+
+}
+
+type Rectangle struct {
+	width float64
+	length float64
+}
+
+func area(r Rectangle) float64 {
+	return r.width * r.length
+}
+
+var rec Rectangle
+
+func findArea() {
+	
+}
+
+
+
+func closureFunc() {
+	fn := series()
+
+	fmt.Println(fn())
+}
+
+func series() (func() int, func()) {
+	a, b := 0, 1
+
+	return func() int {
+		defer func() { a, b = b, a+b }()
+		return a
+	}
 }

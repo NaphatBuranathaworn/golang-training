@@ -32,3 +32,66 @@ var p *int
 
 fmt.Println(*p)
 = เป็นการ access ที่ address ที่มันเก็บอยู่
+
+
+DAY2
+json.Unmarshal = json.parse
+
+
+var response Response
+err := json.Unmarshal([]byte(jsonString), &response)
+= &response เป็นการบอกว่า เอาของที่ได้จาก Unmarshal มาเก็บไว้ที่ response
+= stuct Response ต้องตรงกับ json กรณีไม่ตรง ให้ใส่ tag
+
+
+Poninter Receiver
+function การรับ parameters กรณีต้องการให้ pass by reference ให้ใส่ *ข้างหน้า typeด ้วย เช่้น
+เช่น 
+    func (r *rectangle) setWidth(v float64)  {
+        r.width = v
+    }
+
+Defer
+= defer คือการกำหนดให้ ทำงานก่อนที่ function ที่ทำงานอยู่ จะจบ defer ไหนอยู่ล่าง จะทำก่่อน
+= ใช้กรณีที่เจอ data stream ที่มีการต้อง close เช่น db close connection
+= ใช้ทำ recovery
+
+
+Interface
+1. Empty interface *** go เป็น static type ถ้าไม่เจอเป็นอย่าใช้ เพราะมันจะต้องเปลืองในการ แกะ value
+= var i interface{} คือ empty interface สามารถกำหนดอะไรให้มันก็ได้
+เช่น 
+    i = 10
+    i = "ten"
+การ cast type interface จะต้องทำแบบนี้ 
+    i.(string)
+or 
+    i = func() int { return 10 }
+cast to 
+    i.(func() int)())
+
+2. Interface
+= เรียกว่า implicit implement 
+= type error ก็เป็น interface ตัวนึง
+
+
+FirstClassFunction
+= สร้างตัวแปรให้เป็น function ได้
+
+็Higher-Order Function
+
+
+Func type
+
+Go routine
+= keyword go เอาไว้ทำ async process เหมือนกับการแตก thread
+?? non blocking คือ
+
+Channel
+= เป็น sharedMemory 
+?? make คือ
+
+
+
+
+
